@@ -33,3 +33,20 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
+## IMP-classifier模型最佳参数
+
+
+```bash
+model_params = {'input_dim': 2048,  #输入特征维度
+                'embed_dim_reduction':512,   #特征降维特征维度
+                'embed_dim': 256,    #输隐藏特征维度
+                'Task': 2, #任务类别，Regression:1或者Classification:2
+                'output_dim': 3 #3个病变类别    
+                }
+
+# 1.构建模型
+model = att_mil_model(**model_params)     
+# 2. 加载预训练模型
+pretrained_model = torch.load("/WData1/xiangjun/pathology_tset/glf/2.best_model.pth")
+model.load_state_dict(new_state_dict, strict=False)
+```
