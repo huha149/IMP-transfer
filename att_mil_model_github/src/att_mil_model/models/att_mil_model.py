@@ -107,11 +107,11 @@ class att_mil_model(nn.Module):
     def __init__(
         self,
         input_dim: int = 2048,
-        embed_dim_reduction: int = 256,
+        embed_dim_reduction: int = 512,
         embed_dim: int = 256,
         Task: int = 2,
-        output_dim: int = 2,
-        attention_dropout: bool = False,
+        output_dim: int = 3,
+        attention_dropout: bool = True,
         normalize_attention: bool = True,
     ) -> None:
         super().__init__()
