@@ -44,9 +44,7 @@ model_params = {'input_dim': 2048,  #输入特征维度
                 'output_dim': 3 #3个病变类别    
                 }
 
-# 1.构建模型
-model = att_mil_model(**model_params)     
-# 2. 加载预训练模型
-pretrained_model = torch.load("/WData1/xiangjun/pathology_tset/glf/2.best_model.pth")
-model.load_state_dict(new_state_dict, strict=False)
+# 加载预训练模型
+model = torch.load("IMP_classifier.pth")
+
 ```
