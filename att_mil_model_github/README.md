@@ -42,16 +42,3 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-## 运行（示例）
-
-```bash
-python scripts/main_hyper_params.py \
-  --train_csv path/to/labels/train.csv \
-  --train_feature_dir path/to/features/train \
-  --test_csv path/to/labels/test.csv \
-  --test_feature_dir path/to/features/test \
-  --output_dir path/to/output \
-  --device cuda:0
-```
-
-> 注意：请根据你的实际任务修改搜索空间中的 `output_dim`（类别数）以及 `input_dim`（特征维度）。
