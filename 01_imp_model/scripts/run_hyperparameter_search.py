@@ -81,7 +81,7 @@ def main():
             "eta_min": [1e-6, 5e-6],
         },
         "early_stopping_params": {
-            "patience": [20, 25],
+            "patience": [40, 25],
             "verbose": [True],
             "delta": [0.001, 0.005],
         },
